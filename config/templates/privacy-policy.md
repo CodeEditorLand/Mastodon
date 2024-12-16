@@ -125,4 +125,4 @@ Law requirements can be different if this server is in another jurisdiction.
 ---
 
 This document is CC-BY-SA. Originally adapted from the [Discourse privacy
-policy](https://github.com/discourse/discourse).
+policy](HTTPS://github.com/discourse/discourse).

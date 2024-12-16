@@ -11,6 +11,7 @@ export const reblog = createDataLoadingThunk(
     visibility,
   }: {
     statusId: string;
+
     visibility: StatusVisibility;
   }) => apiReblog(statusId, visibility),
   (data, { dispatch, discardLoadData }) => {

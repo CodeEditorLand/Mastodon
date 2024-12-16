@@ -11,8 +11,11 @@ import { unicodeToUnifiedName } from './unicode_to_unified_name';
 type Emojis = {
   [key in NonNullable<keyof ShortCodesToEmojiData>]: {
     native: BaseEmoji['native'];
+
     search: Search;
+
     short_names: Emoji['short_names'];
+
     unified: Emoji['unified'];
   };
 };

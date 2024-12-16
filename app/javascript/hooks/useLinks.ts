@@ -48,9 +48,11 @@ export const useLinks = () => {
 
       if (isMentionClick(target)) {
         e.preventDefault();
+
         handleMentionClick(target);
       } else if (isHashtagClick(target)) {
         e.preventDefault();
+
         handleHashtagClick(target);
       }
     },

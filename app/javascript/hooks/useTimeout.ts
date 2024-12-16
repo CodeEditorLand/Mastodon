@@ -10,6 +10,7 @@ export const useTimeout = () => {
     }
 
     callbackRef.current = callback;
+
     timeoutRef.current = setTimeout(callback, delay);
   }, []);
 

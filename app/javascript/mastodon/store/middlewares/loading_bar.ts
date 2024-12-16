@@ -53,7 +53,9 @@ export const loadingBarMiddleware = (
         action.meta.useLoadingBar
       ) {
         if (isThunkActionPending(action)) isPending = true;
+
         else if (isThunkActionFulfilled(action)) isFulfilled = true;
+
         else if (isThunkActionRejected(action)) isRejected = true;
       } else if (
         isActionWithSkipLoading(action) &&
@@ -63,7 +65,9 @@ export const loadingBarMiddleware = (
         const [PENDING, FULFILLED, REJECTED] = promiseTypeSuffixes;
 
         const isPendingRegexp = new RegExp(`${PENDING}$`, 'g');
+
         const isFulfilledRegexp = new RegExp(`${FULFILLED}$`, 'g');
+
         const isRejectedRegexp = new RegExp(`${REJECTED}$`, 'g');
 
         if (action.type.match(isPendingRegexp)) {

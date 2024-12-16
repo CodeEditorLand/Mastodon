@@ -9,6 +9,7 @@ export const DECIMAL_UNITS = Object.freeze({
   BILLION: 1_000_000_000,
   TRILLION: 1_000_000_000_000,
 });
+
 export type DecimalUnits = ValueOf<typeof DECIMAL_UNITS>;
 
 const TEN_THOUSAND = DECIMAL_UNITS.THOUSAND * 10;

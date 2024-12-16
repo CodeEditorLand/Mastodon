@@ -33,6 +33,7 @@ interface PopModalOption {
   modalType: ModalType | undefined;
   ignoreFocus: boolean;
 }
+
 const popModal = (
   state: State,
   { modalType, ignoreFocus }: PopModalOption,
@@ -56,6 +57,7 @@ const pushModal = (
 ): State => {
   return state.withMutations((record) => {
     record.set('ignoreFocus', false);
+
     record.update('stack', (stack) =>
       stack.unshift(Modal({ modalType, modalProps })),
     );

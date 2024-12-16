@@ -12,6 +12,7 @@ export const fetchDirectory = createDataLoadingThunk(
     apiGetDirectory(params),
   (data, { dispatch }) => {
     dispatch(importFetchedAccounts(data));
+
     dispatch(fetchRelationships(data.map((x) => x.id)));
 
     return { accounts: data };
@@ -30,6 +31,7 @@ export const expandDirectory = createDataLoadingThunk(
   },
   (data, { dispatch }) => {
     dispatch(importFetchedAccounts(data));
+
     dispatch(fetchRelationships(data.map((x) => x.id)));
 
     return { accounts: data };

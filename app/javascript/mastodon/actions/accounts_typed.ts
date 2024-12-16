@@ -24,6 +24,7 @@ export const followAccountSuccess = createAction(
   'accounts/followAccount/SUCCESS',
   actionWithSkipLoadingTrue<{
     relationship: ApiRelationshipJSON;
+
     alreadyFollowing: boolean;
   }>,
 );
@@ -32,7 +33,9 @@ export const unfollowAccountSuccess = createAction(
   'accounts/unfollowAccount/SUCCESS',
   actionWithSkipLoadingTrue<{
     relationship: ApiRelationshipJSON;
+
     statuses: unknown;
+
     alreadyFollowing?: boolean;
   }>,
 );

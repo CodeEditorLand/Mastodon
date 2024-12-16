@@ -87,13 +87,17 @@ export const fetchNotifications = createDataLoadingThunk(
     }),
   ({ notifications, accounts, statuses }, { dispatch }) => {
     dispatch(importFetchedAccounts(accounts));
+
     dispatch(importFetchedStatuses(statuses));
+
     dispatchAssociatedRecords(dispatch, notifications);
+
     const payload: (ApiNotificationGroupJSON | NotificationGap)[] =
       notifications;
 
     // TODO: might be worth not using gaps for that…
     // if (nextLink) payload.push({ type: 'gap', loadUrl: nextLink.uri });
+
     if (notifications.length > 1)
       payload.push({ type: 'gap', maxId: notifications.at(-1)?.page_min_id });
 
@@ -112,7 +116,9 @@ export const fetchNotificationsGap = createDataLoadingThunk(
     }),
   ({ notifications, accounts, statuses }, { dispatch }) => {
     dispatch(importFetchedAccounts(accounts));
+
     dispatch(importFetchedStatuses(statuses));
+
     dispatchAssociatedRecords(dispatch, notifications);
 
     return { notifications };
@@ -136,7 +142,9 @@ export const pollRecentNotifications = createDataLoadingThunk(
   },
   ({ notifications, accounts, statuses }, { dispatch }) => {
     dispatch(importFetchedAccounts(accounts));
+
     dispatch(importFetchedStatuses(statuses));
+
     dispatchAssociatedRecords(dispatch, notifications);
 
     return { notifications };
@@ -150,7 +158,9 @@ export const processNewNotificationForGroups = createAppAsyncThunk(
   'notificationGroups/processNew',
   (notification: ApiNotificationJSON, { dispatch, getState }) => {
     const state = getState();
+
     const activeFilter = selectSettingsNotificationsQuickFilterActive(state);
+
     const notificationShows = selectSettingsNotificationsShows(state);
 
     const showInColumn =
@@ -206,7 +216,9 @@ export const setNotificationsFilter = createAppAsyncThunk(
       path: ['notifications', 'quickFilter', 'active'],
       value: filterType,
     });
+
     void dispatch(fetchNotifications());
+
     dispatch(saveSettings());
   },
 );
@@ -246,6 +258,7 @@ export const refreshStaleNotificationGroups = createAppAsyncThunk<{
     !state.notificationGroups.mounted
   ) {
     void dispatch(fetchNotifications());
+
     return { deferredRefresh: false };
   }
 

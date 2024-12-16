@@ -120,6 +120,7 @@ const fromAcct = (acct: string) => {
 
   if (segments.length !== 2 || !segments[0] || !isValidDomain(segments[1])) {
     fetchInteractionURLFailure();
+
     return;
   }
 
@@ -128,6 +129,7 @@ const fromAcct = (acct: string) => {
 
   if (!domain) {
     fetchInteractionURLFailure();
+
     return;
   }
 

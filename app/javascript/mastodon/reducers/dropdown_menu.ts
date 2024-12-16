@@ -20,13 +20,16 @@ export const dropdownMenuReducer = createReducer(initialState, (builder) => {
       openDropdownMenu,
       (state, { payload: { id, keyboard, scrollKey } }) => {
         state.openId = id;
+
         state.keyboard = keyboard;
+
         state.scrollKey = scrollKey;
       },
     )
     .addCase(closeDropdownMenu, (state, { payload: { id } }) => {
       if (state.openId === id) {
         state.openId = null;
+
         state.scrollKey = null;
       }
     });

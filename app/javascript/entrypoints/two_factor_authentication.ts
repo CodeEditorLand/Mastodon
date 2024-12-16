@@ -39,6 +39,7 @@ async function callback(
   body:
     | {
         credential: WebAuthnJSON.PublicKeyCredentialWithAttestationJSON;
+
         nickname: string;
       }
     | {
@@ -136,6 +137,7 @@ ready(() => {
     const unsupported_browser_message = document.getElementById(
       'unsupported-browser-message',
     );
+
     if (unsupported_browser_message) {
       unsupported_browser_message.classList.remove('hidden');
       const button = document.querySelector<HTMLButtonElement>(
@@ -186,6 +188,7 @@ ready(() => {
     });
 
     const linkToWebAuthn = document.getElementById('link-to-webauthn');
+
     linkToWebAuthn?.addEventListener('click', () => {
       otpAuthenticationForm?.classList.add('hidden');
       webAuthnCredentialAuthenticationForm.classList.remove('hidden');

@@ -17,10 +17,12 @@ type Skins = null;
 
 type Filename = string;
 type UnicodeFilename = string;
+
 export type FilenameData = [
   filename: Filename,
   unicodeFilename?: UnicodeFilename,
 ][];
+
 export type ShortCodesToEmojiDataKey =
   | EmojiData['id']
   | BaseEmoji['native']

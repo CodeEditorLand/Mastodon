@@ -9,7 +9,9 @@ export const notificationsUpdate = createAction(
     ...args
   }: {
     notification: ApiNotificationJSON;
+
     usePendingItems: boolean;
+
     playSound: boolean;
   }) => ({
     payload: args,

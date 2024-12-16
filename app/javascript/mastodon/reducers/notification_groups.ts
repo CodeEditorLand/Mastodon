@@ -92,6 +92,7 @@ function filterNotificationsForAccounts(
         );
 
         const newLength = group.sampleAccountIds.length;
+
         const removed = previousLength - newLength;
 
         group.notifications_count -= removed;
@@ -165,7 +166,9 @@ function mergeGaps(groups: NotificationGroupsState['groups']) {
 
       for (; j < groups.length; j++) {
         const groupOrGap = groups[j];
+
         if (groupOrGap?.type === 'gap') lastGap = groupOrGap;
+
         else break;
       }
 
@@ -187,6 +190,7 @@ function mergeGapsAround(
 ) {
   if (index > 0) {
     const potentialFirstGap = groups[index - 1];
+
     const potentialSecondGap = groups[index];
 
     if (
@@ -259,6 +263,7 @@ function processNewNotification(
 function trimNotifications(state: NotificationGroupsState) {
   if (state.scrolledToTop && state.groups.length > NOTIFICATIONS_TRIM_LIMIT) {
     state.groups.splice(NOTIFICATIONS_TRIM_LIMIT);
+
     ensureTrailingGap(state.groups);
   }
 }
@@ -296,6 +301,7 @@ function updateLastReadId(
 ) {
   if (shouldMarkNewNotificationsAsRead(state)) {
     group = group ?? state.groups.find(isNotificationGroup);
+
     if (
       group?.page_max_id &&
       compareId(state.lastReadId, group.page_max_id) < 0
@@ -406,6 +412,7 @@ function ensureLeadingGap(
     };
 
     groups.unshift(gap);
+
     return gap;
   }
 }
@@ -428,6 +435,7 @@ function ensureTrailingGap(
     };
 
     groups.push(gap);
+
     return gap;
   }
 }
@@ -440,8 +448,11 @@ export const notificationGroupsReducer = createReducer<NotificationGroupsState>(
         state.groups = action.payload.map((json) =>
           json.type === 'gap' ? json : createNotificationGroupFromJSON(json),
         );
+
         state.isLoading = false;
+
         state.mergedNotifications = 'ok';
+
         updateLastReadId(state);
       })
       .addCase(fetchNotificationsGap.fulfilled, (state, action) => {
@@ -450,6 +461,7 @@ export const notificationGroupsReducer = createReducer<NotificationGroupsState>(
           action.meta.arg.gap,
           action.payload.notifications,
         );
+
         state.isLoading = false;
 
         updateLastReadId(state);
@@ -474,6 +486,7 @@ export const notificationGroupsReducer = createReducer<NotificationGroupsState>(
         state.isLoading = false;
 
         updateLastReadId(state);
+
         trimNotifications(state);
       })
       .addCase(processNewNotificationForGroups.fulfilled, (state, action) => {
@@ -505,6 +518,7 @@ export const notificationGroupsReducer = createReducer<NotificationGroupsState>(
       })
       .addCase(clearNotifications.pending, (state) => {
         state.groups = [];
+
         state.pendingGroups = [];
       })
       .addCase(blockAccountSuccess, (state, action) => {
@@ -531,6 +545,7 @@ export const notificationGroupsReducer = createReducer<NotificationGroupsState>(
                 isNotificationGroup(groupOrGap) &&
                 groupOrGap.group_key === group.group_key,
             );
+
             if (existingGroupIndex > -1) {
               const existingGroup = state.groups[existingGroupIndex];
               if (existingGroup && existingGroup.type !== 'gap') {
@@ -541,6 +556,7 @@ export const notificationGroupsReducer = createReducer<NotificationGroupsState>(
                     .concat(existingGroup.sampleAccountIds)
                     .slice(0, NOTIFICATIONS_GROUP_MAX_AVATARS);
                 }
+
                 state.groups.splice(existingGroupIndex, 1);
               }
             }
@@ -549,17 +565,23 @@ export const notificationGroupsReducer = createReducer<NotificationGroupsState>(
 
         // Then build the consolidated list and clear pending groups
         state.groups = state.pendingGroups.concat(state.groups);
+
         state.pendingGroups = [];
+
         mergeGaps(state.groups);
+
         trimNotifications(state);
       })
       .addCase(updateScrollPosition.fulfilled, (state, action) => {
         state.scrolledToTop = action.payload.top;
+
         updateLastReadId(state);
+
         trimNotifications(state);
       })
       .addCase(markNotificationsAsRead, (state) => {
         const mostRecentGroup = state.groups.find(isNotificationGroup);
+
         if (
           mostRecentGroup?.page_max_id &&
           compareId(state.lastReadId, mostRecentGroup.page_max_id) < 0
@@ -585,7 +607,9 @@ export const notificationGroupsReducer = createReducer<NotificationGroupsState>(
       })
       .addCase(mountNotifications.fulfilled, (state) => {
         state.mounted += 1;
+
         commitLastReadId(state);
+
         updateLastReadId(state);
       })
       .addCase(unmountNotifications, (state) => {
@@ -593,7 +617,9 @@ export const notificationGroupsReducer = createReducer<NotificationGroupsState>(
       })
       .addCase(focusApp, (state) => {
         state.isTabVisible = true;
+
         commitLastReadId(state);
+
         updateLastReadId(state);
       })
       .addCase(unfocusApp, (state) => {

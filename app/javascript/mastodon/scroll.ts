@@ -18,6 +18,7 @@ const scroll = (
 
   const step = () => {
     const elapsed = Date.now() - startTime;
+
     const percentage = elapsed / duration;
 
     if (percentage > 1 || interrupt) {
@@ -25,6 +26,7 @@ const scroll = (
     }
 
     node[key] = easingOutQuint(0, elapsed, offset, gap, duration);
+
     requestAnimationFrame(step);
   };
 

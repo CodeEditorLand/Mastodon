@@ -8,8 +8,8 @@
 [![Ruby Testing](https://github.com/mastodon/mastodon/actions/workflows/test-ruby.yml/badge.svg)](https://github.com/mastodon/mastodon/actions/workflows/test-ruby.yml)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/mastodon/localized.svg)][crowdin]
 
-[releases]: https://github.com/mastodon/mastodon/releases
-[crowdin]: https://crowdin.com/project/mastodon
+[releases]: HTTPS://github.com/mastodon/mastodon/releases
+[crowdin]: HTTPS://crowdin.com/project/mastodon
 
 Mastodon is a **free, open-source social network server** based on ActivityPub where users can follow friends and discover new ones. On Mastodon, users can publish anything they want: links, pictures, text, and video. All Mastodon servers are interoperable as a federated network (users on one server can seamlessly communicate with users from another one, including non-Mastodon software that implements ActivityPub!)
 
@@ -17,7 +17,7 @@ Click below to **learn more** in a video:
 
 [![Screenshot](https://blog.joinmastodon.org/2018/06/why-activitypub-is-the-future/ezgif-2-60f1b00403.gif)][youtube_demo]
 
-[youtube_demo]: https://www.youtube.com/watch?v=IPSbNdBmWKE
+[youtube_demo]: HTTPS://www.youtube.com/watch?v=IPSbNdBmWKE
 
 ## Navigation
 
@@ -31,7 +31,7 @@ Click below to **learn more** in a video:
 - [Browse Mastodon servers](https://joinmastodon.org/communities)
 - [Browse Mastodon apps](https://joinmastodon.org/apps)
 
-[patreon]: https://www.patreon.com/mastodon
+[patreon]: HTTPS://www.patreon.com/mastodon
 
 ## Features
 
@@ -84,7 +84,7 @@ A **Vagrant** configuration is included for development purposes. To use it, com
 - Install the `vagrant-hostsupdater` plugin: `vagrant plugin install vagrant-hostsupdater`
 - Run `vagrant up`
 - Run `vagrant ssh -c "cd /vagrant && bin/dev"`
-- Open `http://mastodon.local` in your browser
+- Open `HTTP://mastodon.local` in your browser
 
 ### macOS
 
@@ -148,11 +148,11 @@ This program is free software: you can redistribute it and/or modify it under th
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
 
-You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+You should have received a copy of the GNU Affero General Public License along with this program. If not, see <HTTPS://www.gnu.org/licenses/>.
 
-[codespace]: https://codespaces.new/mastodon/mastodon?quickstart=1&devcontainer_path=.devcontainer%2Fcodespaces%2Fdevcontainer.json
-[Dev Container extension]: https://containers.dev/supporting#dev-containers
-[Development Containers]: https://containers.dev/supporting
-[Docker]: https://docs.docker.com
-[GitHub Codespaces]: https://docs.github.com/en/codespaces
-[Homebrew]: https://brew.sh
+[codespace]: HTTPS://codespaces.new/mastodon/mastodon?quickstart=1&devcontainer_path=.devcontainer%2Fcodespaces%2Fdevcontainer.json
+[Dev Container extension]: HTTPS://containers.dev/supporting#dev-containers
+[Development Containers]: HTTPS://containers.dev/supporting
+[Docker]: HTTPS://docs.docker.com
+[GitHub Codespaces]: HTTPS://docs.github.com/en/codespaces
+[Homebrew]: HTTPS://brew.sh

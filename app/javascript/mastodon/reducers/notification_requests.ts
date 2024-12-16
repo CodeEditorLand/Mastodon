@@ -82,14 +82,18 @@ export const notificationRequestsReducer =
         state.items = action.payload.requests
           .map(createNotificationRequestFromJSON)
           .concat(state.items);
+
         state.isLoading = false;
+
         state.next ??= action.payload.next ?? null;
       })
       .addCase(expandNotificationRequests.fulfilled, (state, action) => {
         state.items = state.items.concat(
           action.payload.requests.map(createNotificationRequestFromJSON),
         );
+
         state.isLoading = false;
+
         state.next = action.payload.next ?? null;
       })
       .addCase(blockAccountSuccess, (state, action) => {
@@ -107,20 +111,25 @@ export const notificationRequestsReducer =
       })
       .addCase(fetchNotificationRequest.fulfilled, (state, action) => {
         state.current.isLoading = false;
+
         state.current.item = createNotificationRequestFromJSON(action.payload);
       })
       .addCase(fetchNotificationsForRequest.fulfilled, (state, action) => {
         state.current.notifications.isLoading = false;
+
         state.current.notifications.items.unshift(
           ...action.payload.notifications.map(notificationToMap),
         );
+
         state.current.notifications.next ??= action.payload.next ?? null;
       })
       .addCase(expandNotificationsForRequest.fulfilled, (state, action) => {
         state.current.notifications.isLoading = false;
+
         state.current.notifications.items.push(
           ...action.payload.notifications.map(notificationToMap),
         );
+
         state.current.notifications.next = action.payload.next ?? null;
       })
       .addMatcher(

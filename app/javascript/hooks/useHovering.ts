@@ -5,11 +5,13 @@ export const useHovering = (animate?: boolean) => {
 
   const handleMouseEnter = useCallback(() => {
     if (animate) return;
+
     setHovering(true);
   }, [animate]);
 
   const handleMouseLeave = useCallback(() => {
     if (animate) return;
+
     setHovering(false);
   }, [animate]);
 

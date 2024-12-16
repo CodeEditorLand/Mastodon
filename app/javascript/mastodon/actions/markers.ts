@@ -12,6 +12,7 @@ export const synchronouslySubmitMarkers = createAppAsyncThunk(
   'markers/submit',
   async (_args, { getState }) => {
     const accessToken = getAccessToken();
+
     const params = buildPostMarkersParams(getState());
 
     if (

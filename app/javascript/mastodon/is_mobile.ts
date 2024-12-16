@@ -9,6 +9,7 @@ export const isMobile = (width: number) => width <= LAYOUT_BREAKPOINT;
 export const transientSingleColumn = !forceSingleColumn && !hasMultiColumnPath;
 
 export type LayoutType = 'mobile' | 'single-column' | 'multi-column';
+
 export const layoutFromWindow = (): LayoutType => {
   if (isMobile(window.innerWidth)) {
     return 'mobile';

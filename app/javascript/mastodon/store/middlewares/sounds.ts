@@ -30,8 +30,11 @@ const createAudio = (sources: AudioSource[]) => {
   const audio = new Audio();
   sources.forEach(({ type, src }) => {
     const source = document.createElement('source');
+
     source.type = type;
+
     source.src = src;
+
     audio.appendChild(source);
   });
   return audio;
@@ -40,6 +43,7 @@ const createAudio = (sources: AudioSource[]) => {
 const play = (audio: HTMLAudioElement) => {
   if (!audio.paused) {
     audio.pause();
+
     if (typeof audio.fastSeek === 'function') {
       audio.fastSeek(0);
     } else {
@@ -76,6 +80,7 @@ export const soundsMiddleware = (): Middleware<
 
       if (sound) {
         const s = soundCache[sound];
+
         if (s) play(s);
       }
     }

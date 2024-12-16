@@ -90,6 +90,7 @@ export const expandNotificationRequests = createDataLoadingThunk(
   'notificationRequests/expand',
   async (_, { getState }) => {
     const nextUrl = getState().notificationRequests.next;
+
     if (!nextUrl) throw new Error('missing URL');
 
     return apiFetchNotificationRequests(undefined, nextUrl);
@@ -145,6 +146,7 @@ export const expandNotificationsForRequest = createDataLoadingThunk(
   'notificationRequest/expandNotifications',
   async (_, { getState }) => {
     const nextUrl = getState().notificationRequests.current.notifications.next;
+
     if (!nextUrl) throw new Error('missing URL');
 
     return apiFetchNotifications(undefined, nextUrl);

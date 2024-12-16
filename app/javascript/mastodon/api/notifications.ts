@@ -13,6 +13,7 @@ import type {
 export const apiFetchNotifications = async (
   params?: {
     account_id?: string;
+
     since_id?: string;
   },
   url?: string,

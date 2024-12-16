@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import type { AppDispatch, RootState } from './store';
 
 export const useAppDispatch = useDispatch.withTypes<AppDispatch>();
+
 export const useAppSelector = useSelector.withTypes<RootState>();
 
 export interface AsyncThunkRejectValue {
@@ -72,6 +73,7 @@ export function createThunk<Arg = void, Returned = void>(
     {
       getPendingMeta() {
         if (options.useLoadingBar) return { useLoadingBar: true };
+
         return {};
       },
       condition: options.condition,
@@ -86,6 +88,7 @@ type OnData<ActionArg, LoadDataResult, ReturnedData> = (
   data: LoadDataResult,
   api: AppThunkApi & {
     actionArg: ActionArg;
+
     discardLoadData: DiscardLoadData;
   },
 ) => ReturnedData | DiscardLoadData | Promise<ReturnedData | DiscardLoadData>;

@@ -10,6 +10,7 @@ export interface NotificationPolicyJSON {
   for_limited_accounts: NotificationPolicyValue;
   summary: {
     pending_requests_count: number;
+
     pending_notifications_count: number;
   };
 }

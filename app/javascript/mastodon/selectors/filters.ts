@@ -20,6 +20,7 @@ export const getFilters = createSelector(
     }
 
     const now = new Date();
+
     const serverSideType = toServerSideType(contextType);
 
     return filters.filter((filter) => {

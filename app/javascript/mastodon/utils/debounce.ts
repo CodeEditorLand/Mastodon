@@ -11,13 +11,17 @@ export const debounceWithDispatchAndArguments = <T>(
 
   const wrapped = debounce(() => {
     const tmpBuffer = argumentBuffer;
+
     argumentBuffer = [];
+
     fn(dispatchBuffer, ...tmpBuffer);
   }, delay);
 
   return (dispatch: AppDispatch, ...args: T[]) => {
     dispatchBuffer = dispatch;
+
     argumentBuffer.push(...args);
+
     wrapped();
   };
 };

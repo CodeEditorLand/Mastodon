@@ -35,6 +35,7 @@ const AccountFieldFactory = ImmutableRecord<AccountFieldShape>({
 
 // AccountRole
 export type AccountRoleShape = ApiAccountRoleJSON;
+
 export type AccountRole = RecordOf<AccountRoleShape>;
 
 const AccountRoleFactory = ImmutableRecord<AccountRoleShape>({
@@ -107,6 +108,7 @@ type EmojiMap = Record<string, ApiCustomEmojiJSON>;
 function makeEmojiMap(emojis: ApiCustomEmojiJSON[]) {
   return emojis.reduce<EmojiMap>((obj, emoji) => {
     obj[`:${emoji.shortcode}:`] = emoji;
+
     return obj;
   }, {});
 }
