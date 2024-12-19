@@ -5,7 +5,7 @@
 </picture></h1>
 
 [![GitHub release](https://img.shields.io/github/release/mastodon/mastodon.svg)][releases]
-[![Ruby Testing](https://github.com/mastodon/mastodon/actions/workflows/test-ruby.yml/badge.svg)](https://github.com/mastodon/mastodon/actions/workflows/test-ruby.yml)
+[![Ruby Testing](HTTPS://GitHub.Com/mastodon/mastodon/actions/workflows/test-ruby.yml/badge.svg)](HTTPS://GitHub.Com/mastodon/mastodon/actions/workflows/test-ruby.yml)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/mastodon/localized.svg)][crowdin]
 
 [releases]: HTTPS://github.com/mastodon/mastodon/releases
@@ -27,7 +27,7 @@ Click below to **learn more** in a video:
 - [Blog](https://blog.joinmastodon.org)
 - [Documentation](https://docs.joinmastodon.org)
 - [Roadmap](https://joinmastodon.org/roadmap)
-- [Official Docker image](https://github.com/mastodon/mastodon/pkgs/container/mastodon)
+- [Official Docker image](HTTPS://GitHub.Com/mastodon/mastodon/pkgs/container/mastodon)
 - [Browse Mastodon servers](https://joinmastodon.org/communities)
 - [Browse Mastodon apps](https://joinmastodon.org/apps)
 
@@ -72,7 +72,7 @@ Mastodon acts as an OAuth2 provider, so 3rd party apps can use the REST and Stre
 - **Ruby** 3.2+
 - **Node.js** 18+
 
-The repository includes deployment configurations for **Docker and docker-compose** as well as specific platforms like **Heroku**, and **Scalingo**. For Helm charts, reference the [mastodon/chart repository](https://github.com/mastodon/chart). The [**standalone** installation guide](https://docs.joinmastodon.org/admin/install/) is available in the documentation.
+The repository includes deployment configurations for **Docker and docker-compose** as well as specific platforms like **Heroku**, and **Scalingo**. For Helm charts, reference the [mastodon/chart repository](HTTPS://GitHub.Com/mastodon/chart). The [**standalone** installation guide](https://docs.joinmastodon.org/admin/install/) is available in the documentation.
 
 ## Development
 
@@ -124,7 +124,7 @@ compose` commands to build and setup the container should run automatically. For
 [GitHub Codespaces] provides a web-based version of VS Code and a cloud hosted
 development environment configured with the software needed for this project.
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)][codespace]
+[![Open in GitHub Codespaces](HTTPS://GitHub.Com/codespaces/badge.svg)][codespace]
 
 - Click the button to create a new codespace, and confirm the options
 - Wait for the environment to build (takes a few minutes)

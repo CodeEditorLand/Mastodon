@@ -3,7 +3,7 @@
 	"private": true,
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/mastodon/mastodon.git"
+		"url": "HTTPS://github.com/mastodon/mastodon.git"
 	},
 	"license": "AGPL-3.0-or-later",
 	"workspaces": [

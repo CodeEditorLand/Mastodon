@@ -167,7 +167,7 @@ RSpec.describe LinkDetailsExtractor do
               {
                 "@context": "https://schema.org",
                 "@type": "ItemList",
-                "url": "https://example.com/cat.html",
+                "url": "HTTPS://example.com/cat.html",
                 "name": "Man bites cat",
                 "description": "A cat's tale"
               },
@@ -207,7 +207,7 @@ RSpec.describe LinkDetailsExtractor do
               {
                 "@context": "https://schema.org",
                 "@type": "ItemList",
-                "url": "https://example.com/cat.html",
+                "url": "HTTPS://example.com/cat.html",
                 "name": "Man bites cat",
                 "description": "A cat's tale"
               },
