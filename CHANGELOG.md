@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## [4.3.1] - 2024-10-21
 
-### Added
+### Add
 
 - Add more explicit explanations about author attribution and
   `fediverse:creator` (#32383 by @ClearlyClaire)
@@ -14,7 +14,7 @@ All notable changes to this project will be documented in this file.
 - Add note about not changing ActiveRecord encryption secrets once they are set
   (#32413, #32476, #32512, and #32537 by @ClearlyClaire and @mjankowski)
 
-### Changed
+### Change
 
 - Change translation feature to translate to selected regional variant (e.g.
   pt-BR) if available (#32428 by @c960657)
@@ -84,7 +84,7 @@ particular by @mjankowski.
   (#26897 and #32241 by @ClearlyClaire)
 - Update dependencies
 
-### Added
+### Add
 
 - **Add server-side notification grouping** (#29889, #30576, #30685, #30688,
   #30707, #30776, #30779, #30781, #30440, #31062, #31098, #31076, #31111,
@@ -390,7 +390,7 @@ particular by @mjankowski.
   @ClearlyClaire)
 - Add PWA shortcut to `/explore` page (#27235 by @jake-anto)
 
-### Changed
+### Change
 
 - **Change icons throughout the web interface** (#27385, #27539, #27555, #27579,
   #27700, #27817, #28519, #28709, #28064, #28775, #28780, #27924, #29294,
@@ -748,12 +748,12 @@ particular by @mjankowski.
 
 ## |4.2.11] - 2024-08-16
 
-### Added
+### Add
 
 - Add support for incoming `<s>` tag
   ([mediaformat](HTTPS://github.com/mastodon/mastodon/pull/31375))
 
-### Changed
+### Change
 
 - Change logic of block/mute bypass for mentions from moderators to only apply
   to visible roles with moderation powers
@@ -819,11 +819,11 @@ particular by @mjankowski.
   ([GHSA-vp5r-5pgw-jwqx](HTTPS://github.com/mastodon/mastodon/security/advisories/GHSA-vp5r-5pgw-jwqx))
 - Update dependencies
 
-### Added
+### Add
 
 - Add yarn version specification to avoid confusion with Yarn 3 and Yarn 4
 
-### Changed
+### Change
 
 - Change preview cards generation to skip unusually long URLs
   ([oneiros](HTTPS://github.com/mastodon/mastodon/pull/30854))
@@ -863,7 +863,7 @@ particular by @mjankowski.
 - Add hardening around rate-limit bypass
   ([GHSA-c2r5-cfqr-c553](HTTPS://github.com/mastodon/mastodon/security/advisories/GHSA-c2r5-cfqr-c553))
 
-### Added
+### Add
 
 - Add rate-limit on OAuth application registration
   ([ThisIsMissEm](HTTPS://github.com/mastodon/mastodon/pull/30316))
@@ -910,7 +910,7 @@ particular by @mjankowski.
 
 ## [4.2.8] - 2024-02-23
 
-### Added
+### Add
 
 - Add hourly task to automatically require approval for new registrations in the
   absence of moderators
@@ -926,7 +926,7 @@ particular by @mjankowski.
   `EMAIL_DOMAIN_ALLOWLIST` is used, and can also be disabled with
   `DISABLE_AUTOMATIC_SWITCHING_TO_APPROVED_REGISTRATIONS=true`.
 
-### Changed
+### Change
 
 - Change registrations to be closed by default on new installations
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/29280)) If you are
@@ -1055,7 +1055,7 @@ particular by @mjankowski.
 
 ## [4.2.2] - 2023-12-04
 
-### Changed
+### Change
 
 - Change dismissed banners to be stored server-side
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/27055))
@@ -1108,14 +1108,14 @@ particular by @mjankowski.
 
 ## [4.2.1] - 2023-10-10
 
-### Added
+### Add
 
 - Add redirection on `/deck` URLs for logged-out users
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/27128))
 - Add support for v4.2.0 migrations to `tootctl maintenance fix-duplicates`
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/27147))
 
-### Changed
+### Change
 
 - Change some worker lock TTLs to be shorter-lived
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/27246))
@@ -1189,7 +1189,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 [@renchap](HTTPS://github.com/renchap), and
 [@takayamaki](HTTPS://github.com/takayamaki).
 
-### Added
+### Add
 
 - **Add full-text search of opted-in public posts and rework search operators**
   ([Gargron](HTTPS://github.com/mastodon/mastodon/pull/26485),
@@ -1502,7 +1502,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 - Add API parameter to safeguard unexpected mentions in new posts
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/18350))
 
-### Changed
+### Change
 
 - **Change hashtags to be displayed separately when they are the last line of a
   post** ([renchap](HTTPS://github.com/mastodon/mastodon/pull/26499),
@@ -2000,7 +2000,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 
 ## [4.1.7] - 2023-09-05
 
-### Changed
+### Change
 
 - Change remote report processing to accept reports with long comments, but
   truncate them
@@ -2031,12 +2031,12 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 
 ## [4.1.5] - 2023-07-21
 
-### Added
+### Add
 
 - Add check preventing Sidekiq workers from running with Makara configured
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/25850))
 
-### Changed
+### Change
 
 - Change request timeout handling to use a longer deadline
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/26055))
@@ -2069,13 +2069,13 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 
 ## [4.1.3] - 2023-07-06
 
-### Added
+### Add
 
 - Add fallback redirection when getting a webfinger query
   `LOCAL_DOMAIN@LOCAL_DOMAIN`
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/23600))
 
-### Changed
+### Change
 
 - Change OpenGraph-based embeds to allow fullscreen
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/25058))
@@ -2173,7 +2173,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 
 ## [4.1.1] - 2023-03-16
 
-### Added
+### Add
 
 - Add redirection from paths with url-encoded `@` to their decoded form
   ([thijskh](HTTPS://github.com/mastodon/mastodon/pull/23593))
@@ -2194,7 +2194,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 - Add cache headers to static files served through Rails
   ([Gargron](HTTPS://github.com/mastodon/mastodon/pull/24120))
 
-### Changed
+### Change
 
 - Increase contrast of upload progress bar background
   ([toolmantim](HTTPS://github.com/mastodon/mastodon/pull/23836))
@@ -2268,7 +2268,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 
 ## [4.1.0] - 2023-02-10
 
-### Added
+### Add
 
 - **Add support for importing/exporting server-wide domain blocks**
   ([enbylenore](HTTPS://github.com/mastodon/mastodon/pull/20597),
@@ -2393,7 +2393,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 - Add `lang` attribute to compose form inputs
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/23240))
 
-### Changed
+### Change
 
 - **Ensure exact match is the first result in hashtag searches**
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/21315))
@@ -2742,7 +2742,7 @@ Some of the features in this release have been funded through the
 [Next Generation Internet](HTTPS://ngi.eu/) programme, under the aegis of DG
 Communications Networks, Content and Technology under grant agreement No 825322.
 
-### Added
+### Add
 
 - Add ability to filter followed accounts' posts by language
   ([Gargron](HTTPS://github.com/mastodon/mastodon/pull/19095),
@@ -2883,7 +2883,7 @@ Communications Networks, Content and Technology under grant agreement No 825322.
 - Add support for DigitalOcean Spaces in setup wizard
   ([v-aisac](HTTPS://github.com/mastodon/mastodon/pull/20573))
 
-### Changed
+### Change
 
 - **Change brand color and logotypes**
   ([Gargron](HTTPS://github.com/mastodon/mastodon/pull/18592),
