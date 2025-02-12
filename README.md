@@ -33,7 +33,7 @@ Click below to **learn more** in a video:
 
 [patreon]: HTTPS://www.patreon.com/mastodon
 
-## Features
+## Feature
 
 <img src="/app/javascript/images/elephant_ui_working.svg?raw=true" align="right" width="30%" />
 
