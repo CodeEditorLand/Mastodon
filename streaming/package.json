@@ -18,7 +18,7 @@
 		"express": "4.21.2",
 		"ioredis": "5.5.0",
 		"jsdom": "26.0.0",
-		"pg": "8.13.2",
+		"pg": "8.13.3",
 		"pg-connection-string": "2.7.0",
 		"pino": "9.6.0",
 		"pino-http": "10.4.0",
