@@ -205,9 +205,9 @@ particular by @mjankowski.
     On the API side, this is represented by a new `authors` attribute to the
     `PreviewCard` entity:
     HTTPS://docs.joinmastodon.org/entities/PreviewCard/#authors \
-    Users can allow arbitrary domains to use `fediverse:creator` to credit them
+     Users can allow arbitrary domains to use `fediverse:creator` to credit them
     by visiting `/settings/verification`.\
-    This is federated as a new `attributionDomains` property in the
+     This is federated as a new `attributionDomains` property in the
     `HTTP://joinmastodon.org/ns` namespace, containing an array of domain names:
     HTTPS://docs.joinmastodon.org/spec/activitypub/#properties-used-1
 - **Add in-app notifications for moderation actions and warnings** (#30065,
