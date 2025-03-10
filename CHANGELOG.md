@@ -28,7 +28,7 @@ All notable changes to this project will be documented in this file.
   We have therefore decided to remove the menu entry while we investigate
   solutions.
 
-### Fixed
+### Fix
 
 - Fix follow recommendation moderation page default language when using regional
   variant (#32580 by @ClearlyClaire)
@@ -604,7 +604,7 @@ particular by @mjankowski.
   Instead, the unfollow confirmation modal will always be displayed.
 - Remove support for Capistrano (#27295 and #30009 by @mjankowski and @renchap)
 
-### Fixed
+### Fix
 
 - **Fix link preview cards not always preserving the original URL from the
   status** (#27312 by @Gargron)
@@ -759,7 +759,7 @@ particular by @mjankowski.
   to visible roles with moderation powers
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/31271))
 
-### Fixed
+### Fix
 
 - Fix incorrect rate limit on PUT requests
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/31356))
@@ -840,7 +840,7 @@ particular by @mjankowski.
 - Removed dependency on `posix-spawn`
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/18559))
 
-### Fixed
+### Fix
 
 - Fix scheduled statuses scheduled in less than 5 minutes being immediately
   published ([danielmbrasil](HTTPS://github.com/mastodon/mastodon/pull/30584))
@@ -880,7 +880,7 @@ particular by @mjankowski.
 - Remove aggressive OAuth application vacuuming
   ([ThisIsMissEm](HTTPS://github.com/mastodon/mastodon/pull/30316))
 
-### Fixed
+### Fix
 
 - Fix leaking Elasticsearch connections in Sidekiq processes
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/30450))
@@ -935,7 +935,7 @@ particular by @mjankowski.
   through the administration interface or using
   `tootctl settings registrations open` if you want to enable them again.
 
-### Fixed
+### Fix
 
 - Fix processing of remote ActivityPub actors making use of `Link` objects as
   `Image` `url`
@@ -945,7 +945,7 @@ particular by @mjankowski.
 
 ## [4.2.7] - 2024-02-16
 
-### Fixed
+### Fix
 
 - Fix OmniAuth tests and edge cases in error handling
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/29201),
@@ -1002,7 +1002,7 @@ particular by @mjankowski.
 
 ## [4.2.4] - 2024-01-24
 
-### Fixed
+### Fix
 
 - Fix error when processing remote files with unusually long names
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/28823))
@@ -1048,7 +1048,7 @@ particular by @mjankowski.
 
 ## [4.2.3] - 2023-12-05
 
-### Fixed
+### Fix
 
 - Fix dependency on `json-canonicalization` version that has been made
   unavailable since last release
@@ -1072,7 +1072,7 @@ particular by @mjankowski.
   ([gunchleoc](HTTPS://github.com/mastodon/mastodon/pull/27099),
   [ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/27207))
 
-### Fixed
+### Fix
 
 - Fix upper border radius of onboarding columns
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/27890))
@@ -1122,7 +1122,7 @@ particular by @mjankowski.
 - Change user archive export allowed period from 7 days to 6 days
   ([suddjian](HTTPS://github.com/mastodon/mastodon/pull/27200))
 
-### Fixed
+### Fix
 
 - Fix duplicate reports being sent when reporting some remote posts
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/27355))
@@ -1773,7 +1773,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 - Remove `Permissions-Policy` header from all responses
   ([Gargron](HTTPS://github.com/mastodon/mastodon/pull/24124))
 
-### Fixed
+### Fix
 
 - **Fix filters not being applying in the explore page**
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/25887))
@@ -1976,7 +1976,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 
 ## [4.1.8] - 2023-09-19
 
-### Fixed
+### Fix
 
 - Fix post edits not being forwarded as expected
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/26936))
@@ -2006,7 +2006,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
   truncate them
   ([ThisIsMissEm](HTTPS://github.com/mastodon/mastodon/pull/25028))
 
-### Fixed
+### Fix
 
 - **Fix blocking subdomains of an already-blocked domain**
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/26392))
@@ -2018,7 +2018,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 
 ## [4.1.6] - 2023-07-31
 
-### Fixed
+### Fix
 
 - Fix memory leak in streaming server
   ([ThisIsMissEm](HTTPS://github.com/mastodon/mastodon/pull/26228))
@@ -2041,7 +2041,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 - Change request timeout handling to use a longer deadline
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/26055))
 
-### Fixed
+### Fix
 
 - Fix moderation interface for remote instances with a .zip TLD
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/25885))
@@ -2058,7 +2058,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 
 ## [4.1.4] - 2023-07-07
 
-### Fixed
+### Fix
 
 - Fix branding:generate_app_icons failing because of disallowed ICO coder
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/25794))
@@ -2095,7 +2095,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 - Remove invalid `X-Frame-Options: ALLOWALL`
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/25070))
 
-### Fixed
+### Fix
 
 - Fix wrong view being displayed when a webhook fails validation
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/25464))
@@ -2151,7 +2151,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 
 ## [4.1.2] - 2023-04-04
 
-### Fixed
+### Fix
 
 - Fix crash in `tootctl` commands making use of parallelization when
   Elasticsearch is enabled
@@ -2205,7 +2205,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 - Change `ActivityPub::DeliveryWorker` retries to be spread out more
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/21956))
 
-### Fixed
+### Fix
 
 - Fix “Remove all followers from the selected domains” also removing follows and
   notifications
@@ -2515,7 +2515,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 - Remove post count and last posts from ActivityPub representation of hashtag
   collections ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/23460))
 
-### Fixed
+### Fix
 
 - **Fix changing domain block severity not undoing individual account effects**
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/22135))
@@ -2717,7 +2717,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 
 ## [4.0.2] - 2022-11-15
 
-### Fixed
+### Fix
 
 - Fix wrong color on mentions hidden behind content warning in web UI
   ([Gargron](HTTPS://github.com/mastodon/mastodon/pull/20724))
@@ -2729,7 +2729,7 @@ particular by [@danielmbrasil](HTTPS://github.com/danielmbrasil),
 
 ## [4.0.1] - 2022-11-14
 
-### Fixed
+### Fix
 
 - Fix nodes order being sometimes mangled when rewriting emoji
   ([ClearlyClaire](HTTPS://github.com/mastodon/mastodon/pull/20677))
@@ -3056,7 +3056,7 @@ Communications Networks, Content and Technology under grant agreement No 825322.
 - Remove Nanobox configuration
   ([tonyjiang](HTTPS://github.com/mastodon/mastodon/pull/17881))
 
-### Fixed
+### Fix
 
 - Fix rules with same priority being sorted non-deterministically
   ([Gargron](HTTPS://github.com/mastodon/mastodon/pull/20623))
