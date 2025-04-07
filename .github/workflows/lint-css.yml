@@ -34,7 +34,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/setup-node@v4.2.0
+        uses: actions/setup-node@v4.3.0
 
       - name: Set up Javascript environment
         uses: ./.github/actions/setup-javascript
