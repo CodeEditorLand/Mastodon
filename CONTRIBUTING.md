@@ -16,18 +16,18 @@ Please review the org-level [contribution guidelines] for high-level acceptance
 criteria guidance.
 
 [contribution guidelines]:
-	HTTPS://github.com/mastodon/.github/blob/main/CONTRIBUTING.md
+	https://github.com/mastodon/.github/blob/main/CONTRIBUTING.md
 
 ## API Changes and Additions
 
 Please note that any changes or additions made to the API should have an
 accompanying pull request on
-[our documentation repository](HTTPS://GitHub.Com/mastodon/documentation).
+[our documentation repository](https://GitHub.Com/mastodon/documentation).
 
 ## Bug reports
 
 Bug reports and feature suggestions must use descriptive and concise titles and
-be submitted to [GitHub Issues](HTTPS://GitHub.Com/mastodon/mastodon/issues).
+be submitted to [GitHub Issues](https://GitHub.Com/mastodon/mastodon/issues).
 Please use the search function to make sure that you are not submitting
 duplicates, and that a similar report or request has not already been resolved
 or rejected.
@@ -78,4 +78,4 @@ particular, you need to keep in mind:
 
 The [Mastodon documentation](https://docs.joinmastodon.org) is a statically
 generated site. You can
-[submit merge requests to mastodon/documentation](HTTPS://GitHub.Com/mastodon/documentation).
+[submit merge requests to mastodon/documentation](https://GitHub.Com/mastodon/documentation).
