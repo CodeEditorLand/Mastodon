@@ -4,8 +4,8 @@ source 'https://rubygems.org'
 ruby '>= 3.2.0'
 
 gem 'propshaft'
-gem 'puma', '~> 6.3'
-gem 'rack', '~> 2.2.7'
+gem 'puma', '~> 7.2'
+gem 'rack', '~> 2.2.23'
 gem 'rails', '~> 7.2.0'
 gem 'thor', '~> 1.2'
 
@@ -14,7 +14,7 @@ gem 'haml-rails', '~>2.0'
 gem 'pg', '~> 1.5'
 gem 'pghero'
 
-gem 'aws-sdk-s3', '~> 1.123', require: false
+gem 'aws-sdk-s3', '~> 1.208', require: false
 gem 'blurhash', '~> 0.1'
 gem 'fog-core', '<= 2.6.0'
 gem 'fog-openstack', '~> 1.0', require: false
@@ -23,12 +23,12 @@ gem 'kt-paperclip', '~> 7.2'
 gem 'ruby-vips', '~> 2.2', require: false
 
 gem 'active_model_serializers', '~> 0.10'
-gem 'addressable', '~> 2.8'
+gem 'addressable', '~> 2.9'
 gem 'bootsnap', '~> 1.18.0', require: false
 gem 'browser'
 gem 'charlock_holmes', '~> 0.7.7'
 gem 'chewy', '~> 7.3'
-gem 'devise', '~> 4.9'
+gem 'devise', '~> 5.0'
 gem 'devise-two-factor'
 
 group :pam_authentication, optional: true do
@@ -41,7 +41,7 @@ gem 'omniauth', '~> 2.0'
 gem 'omniauth-cas', '~> 3.0.0.beta.1'
 gem 'omniauth_openid_connect', '~> 0.6.1'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
-gem 'omniauth-saml', '~> 2.0'
+gem 'omniauth-saml', '~> 2.2'
 
 gem 'color_diff', '~> 0.1'
 gem 'csv', '~> 3.2'
@@ -64,7 +64,7 @@ gem 'link_header', '~> 0.0'
 gem 'mario-redis-lock', '~> 1.2', require: 'redis_lock'
 gem 'mime-types', '~> 3.6.0', require: 'mime/types/columnar'
 gem 'mutex_m'
-gem 'nokogiri', '~> 1.15'
+gem 'nokogiri', '~> 1.19'
 gem 'oj', '~> 3.14'
 gem 'ox', '~> 2.14'
 gem 'parslet'
